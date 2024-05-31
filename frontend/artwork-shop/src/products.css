@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Jacquard+24&display=swap');
+
+/*base styles*/
+*{
+    font-family: "Inter", sans-serif;
+    color: #111111;
+
+}
+
+.hero2{
+    width: 1440px;
+    height: 683px;
+    margin-top: -300px;
+    margin-left: -70px;
+    background-image: url(./assets/hero3.jpg);
+    background-size: cover;
+    border: 1px solid #111111;
+}
+
+
+/*sorting*/
+
+Form{
+    text-align: left;
+    margin-top: 80px;  
+}
+
+/*Footer*/
+
+.footer{
+    width: 1440px;
+    height: 323px;
+    background-color: #111111;
+    margin-left: 2px;
+    margin-top: 40px;
+    background-image: url(./assets/footer.png);
+    background-size: cover;
+
+}

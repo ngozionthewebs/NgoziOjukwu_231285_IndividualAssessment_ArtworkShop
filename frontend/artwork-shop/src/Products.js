@@ -1,42 +1,98 @@
-
+import './products.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import SortDropdown from './sortDropdown';
+import ProductCard from './productCard';
 
 const Products = () => {
 
     return ( 
-        <div className="home">
-            <div className="header">
+        <div className="products">
+            <Container>
+                <Row className="justify-content-center">
+                        <Col md={12}>
+                        <header className="text-center">
+                            <div className='hero2'></div>
+                            
+                        </header>
+                        </Col>
+                </Row>
 
-                <div className="heading">Welcome to <br/> Sound Sphere*</div>
+                <Row>
+                    <Col md={6}>
+                        <div className="title">
+                            <h1>FEATURED PRODUCTS</h1>
+                        </div>
+                        
+                    </Col>
 
-                <div className="subtext">This web app allows users <br/> to compare music based on <br/> specific properties. <br/> who did it better <br/> lets find out :)   </div>
-            </div>
+                    <Col md={6}>
+                        <SortDropdown></SortDropdown>
+                        
+                    </Col>
+                </Row>
 
-            <div className="dashboard">
-                <div className="dash-image">DASHBOARD</div>
+                <Row>
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
 
-                <div className="track">Get your top 5 tracks
-                <div className="sound"></div>
-                </div>
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
 
-                <div className="listen-now">Listen Now
-                <div className="play"></div>
-                
-                </div>
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
 
-                <div className="rec"> Recommendations
-                    <div className="music"></div>
-                </div>
 
-                <div className="hot">Hottest Right Now
-                    <div className="linegr"></div>
-                </div>
+                </Row>
 
-                <div className="podcast">Podcast <br/> Data
-                <div className="mic"></div>
+                <Row>
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
 
-                </div>
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
 
-            </div>
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
+
+
+                </Row>
+
+                <Row>
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
+
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
+
+                    <Col md={4}>
+                        <ProductCard></ProductCard>
+                    
+                    </Col>
+
+
+                </Row>
+
+            </Container>
+
+
+
+
             <div className="footer"></div>
         </div>
         

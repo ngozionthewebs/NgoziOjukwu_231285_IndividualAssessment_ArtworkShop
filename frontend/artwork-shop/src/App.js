@@ -5,6 +5,7 @@ import NavBar from './Navbar';
 import Products from './Products';
 import Home from './Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Community from './Community';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
               <Products></Products>
             </Route>
             <Route path="/community">
-              {/* Community componet here */}
+              <Community></Community>
             </Route>
           </Switch>
         </div>

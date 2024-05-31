@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Jacquard+24&display=swap');
+
+/*base styles*/
+*{
+    font-family: "Inter", sans-serif;
+    color: #111111;
+
+}
+
+.hero5{
+    width: 1440px;
+    height: 1264px;
+    margin-top: -300px;
+    margin-left: -70px;
+    background-image: url(./assets/hero5.png);
+    background-size: cover;
+    
+}
+.comp{
+    margin-top: -60px;
+    margin-left: -50px;
+}
+
+
+
+.form-control, .form-select {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+  }
+  
+
+button[type="submit"] {
+    background-color: #c10000; /* Dark red */
+    border: none;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #a00000; /* A darker shade for hover state */
+  }
+
+.pic{
+    width: 685px;
+    height: 925px;
+    border: 1px solid #111111;
+    background-color: aliceblue;
+    background-image: url(./assets/pic.png);
+    background-size: cover;
+    
+}
