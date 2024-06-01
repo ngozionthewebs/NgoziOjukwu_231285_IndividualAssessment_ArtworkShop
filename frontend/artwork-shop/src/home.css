@@ -33,12 +33,12 @@
 }
 
 .cardImage{
-
+    width: 370px;
     height: 544px;
 
-    border: 1px solid #111111;
-    background-image: url(./assets/cardimage.png);
     background-size: cover;
+    background-position: center;
+    border: 1px solid #111111;
 }
 
 .info{

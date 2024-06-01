@@ -1,10 +1,38 @@
+import React, { useState, useEffect } from 'react';
 import './home.css';
 import { Container, Row, Col } from 'react-bootstrap';
-
 import ProductCard from './productCard';
+import ApiService from './services/api'; 
+import ProductDetailsModal from './productModal';
 
 
 const Home = () => {
+
+    const [products, setProducts] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null); // State for the selected product
+    const [showModal, setShowModal] = useState(false); // 
+
+    useEffect(() => {
+        ApiService.getProducts()
+            .then(response => {
+                setProducts(response.data); // Assuming the response data is the array of products
+            })
+            .catch(error => {
+                console.error('Error fetching products:', error);
+            });
+    }, []);
+
+    const handleCardClick = (product) => {
+        setSelectedProduct(product);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setSelectedProduct(null);
+    };
+
+
 
     return ( 
         <div className="home">
@@ -28,21 +56,11 @@ const Home = () => {
                 </Row>
 
                 <Row>
-                    <Col md={4}>
-                        <ProductCard></ProductCard>
-                    
-                    </Col>
-
-                    <Col md={4}>
-                        <ProductCard></ProductCard>
-                    
-                    </Col>
-
-                    <Col md={4}>
-                        <ProductCard></ProductCard>
-                    
-                    </Col>
-
+                    {products.slice(0, 3).map(product => (
+                            <Col md={4} key={product._id}>
+                                <ProductCard product={product} onClick={() => handleCardClick(product)} />
+                            </Col>
+                    ))}
 
                 </Row>
 
@@ -81,6 +99,12 @@ const Home = () => {
 
             <footer></footer>
             </Container>
+
+            <ProductDetailsModal 
+                show={showModal} 
+                handleClose={handleCloseModal} 
+                product={selectedProduct} 
+            />
         </div>
         
      );
